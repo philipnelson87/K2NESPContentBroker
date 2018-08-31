@@ -204,7 +204,7 @@ namespace K2Field.K2NE.SPContentBroker.ServiceObjects
                     mGetDocumentById.ReturnProperties.Add(prop);
 
                 }
-                if (prop.IsFileName() || prop.IsLinkToItem())
+                if (prop.IsFileName() || prop.IsLinkToItem() || prop.IsDirectLinkToITem())
                 {
                     mGetDocumentById.ReturnProperties.Add(prop);
                 }
@@ -259,6 +259,12 @@ namespace K2Field.K2NE.SPContentBroker.ServiceObjects
                     {
                         string strurl = BuildListItemLink(context.Url, list.DefaultDisplayFormUrl, listItem.Id);
                         dataRow[prop.Name] = strurl;
+                    }
+                    
+                    if (prop.IsDirectLinkToItem())
+                    {
+                        string strDirUrl = string.Concat(new Uri(context.Url).GetLeftPart(UriPartial.Authority), Uri.EscapeUriString(listItem.File.ServerRelativeUrl));
+                        dataRow[prop.Name] = strDirUrl;
                     }
                 }
                 results.Rows.Add(dataRow);
