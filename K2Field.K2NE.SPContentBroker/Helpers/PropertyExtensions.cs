@@ -89,6 +89,14 @@ namespace K2Field.K2NE.SPContentBroker.Helpers
         {
             return string.Compare(property.Name, Constants.SOProperties.LinkToItem) == 0;
         }
+        
+        /// <summary>
+        /// Check DirectLinkToItem property
+        /// </summary>
+        public static bool IsDirectLinkToItem(this Property property)
+        {
+            return string.Compare(property.Name, Constants.SOProperties.DirectLinkToItem) == 0;
+        }
 
         /// <summary>
         /// SMO property is a folder name
