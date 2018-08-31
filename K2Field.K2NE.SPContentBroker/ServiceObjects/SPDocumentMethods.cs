@@ -204,7 +204,7 @@ namespace K2Field.K2NE.SPContentBroker.ServiceObjects
                     mGetDocumentById.ReturnProperties.Add(prop);
 
                 }
-                if (prop.IsFileName() || prop.IsLinkToItem() || prop.IsDirectLinkToITem())
+                if (prop.IsFileName() || prop.IsLinkToItem() || prop.IsDirectLinkToItem())
                 {
                     mGetDocumentById.ReturnProperties.Add(prop);
                 }
