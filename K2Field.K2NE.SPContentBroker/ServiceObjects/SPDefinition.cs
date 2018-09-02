@@ -366,6 +366,10 @@ namespace K2Field.K2NE.SPContentBroker.ServiceObjects
                 //property use in CheckOut functionality
                 Property useCheckedOutVersion = NewProperty(Constants.SOProperties.UseCheckedOutVersion, Constants.SOProperties.UseCheckedOutVersion_DisplayName, true, SoType.YesNo, "Used Checked Out version");
                 so.Properties.Add(useCheckedOutVersion);
+                
+                //add direct linkToItem property
+                Property directLinkToItemProperty = NewProperty(Constants.SOProperties.DirectLinkToItem, Constants.SOProperties.DirectLinkToItem_DisplayName, true, SoType.Text, "Direct Link To Item");
+                so.Properties.Add(directLinkToItemProperty);
 
                 if(so.IsDocumentSetLibrary())
                 {

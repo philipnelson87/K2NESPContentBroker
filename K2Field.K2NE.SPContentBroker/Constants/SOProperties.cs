@@ -34,6 +34,8 @@ namespace K2Field.K2NE.SPContentBroker.Constants
         public const string FileName_DisplayName = "FileName";
         public const string LinkToItem = "K2_LinkToItem";
         public const string LinkToItem_DisplayName = "LinkToItem";
+        public const string DirectLinkToItem = "K2_DirectLinkToItem";
+        public const string DirectLinkToItem_DisplayName = "DirectLinkToItem";
         public const string File = "File";
         public const string NewFileName = "K2_NewFileName";
         public const string NewFileName_DisplayName = "NewFileName";
